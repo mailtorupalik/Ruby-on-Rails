@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @admin.title %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= @admin.artist %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%= @admin.release_date %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @admin.genre %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back', admins_path %>
