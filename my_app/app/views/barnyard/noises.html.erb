@@ -1,10 +1,11 @@
 <html>
 <head>
-<title>Barnyard noises</title>
+	<title>Barnyard noises</title>
 </head>
 <body>
-<p>The <%=@first_animal.name%> says <% @first_animal.noise%></p>
-<p>The <%=@second_animal.name%> says <% @second_animal.noise%></p>
-<%=debug(@first_animal)%>
+	<p><% for animal in @barnyard -%></p>
+	<p>The <%= animal.name%> says <%=animal.noise %></p>
+	<p><% end -%></p>
+<%= debug(@barnyard)%>
 </body>
 </html>

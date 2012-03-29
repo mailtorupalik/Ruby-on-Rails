@@ -1,13 +1,19 @@
 class BarnyardController < ApplicationController
   def noises
 
-     @first_animal=Animal.new
-	@first_animal.name='cow'
-     @first_animal.noise='Moo!!'     
+	@barnyard=[]
+     animal=Cow.new
+     
+	@barnyard << animal
 
-     @second_animal=Animal.new
-	@second_animal.name='pig'     
-	@second_animal.noise='Oink!!'     
-	
+     animal=Animal.new
+     animal.name='pig'     
+   # animal.noise='Oink!!'     
+     @barnyard << animal
+
+     animal=Animal.new
+     @barnyard << animal
+
+
 end
 end
