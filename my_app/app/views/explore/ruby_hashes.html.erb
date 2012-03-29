@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ruby hashes</title>
+</head>
+<body>
+<%=first_hash={'first_name' => 'rupali', 'last_name' => 'Khobarkhede', 'eyes' => 'blue', 'age' => 20} %><br>
+<%= first_hash.keys.join(', ')%><br>
+<%= first_hash.values.join(', ')%><br>
+<%= first_hash['first_name']%><br>
+<%=first_hash['gender']='female'%><br>
+<%= first_hash.fetch('last_name')%><br>
+<%= first_hash.values_at('first_name','last_name','gender').join(', ')%><br>
+
+<%= first_hash.length%> <br>
+
+<%second_hash={'hair' => 'silky','first_name' => 'mayuri'} %><br>
+
+<%=first_hash.merge!(second_hash)%><br>
+<%= first_hash.keys.join(', ')%><br>
+<%= first_hash.values.join(', ')%><br>
+<% second_hash={} %>
+</body>
+</html>

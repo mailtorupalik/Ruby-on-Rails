@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ruby_arrays</title>
+</head>
+<body>
+<%= first_array=['a','b','c']%><br>
+<%= first_array[1]%><br>
+<%= first_array.join(', ')%><br>
+
+first array <%= first_array.first %><br>
+last array <%= first_array.last %><br>
+<% first_array << 'e' %><br>
+<% first_array << 'd' %><br>
+<% first_array << 45 %><br>
+<%= first_array.join(', ')%>
+
+<%first_array[2]=nil %><br>
+<%= first_array.join(', ')%><br>
+
+<% first_array.delete(45)%><br>
+<%= first_array.join(', ')%>
+<%= first_array.length%>
+<%second_array="Ruby, Rails, Learning, Arrays"%> <br>
+<%=second_array%>
+
+<%=result=second_array.split(', ')%><br>
+<%=result.join(' ')%><br>
+<%=result=[] %>
+
+</body>
+</html> 

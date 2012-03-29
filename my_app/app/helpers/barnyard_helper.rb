@@ -1,0 +1,2 @@
+module BarnyardHelper
+end
