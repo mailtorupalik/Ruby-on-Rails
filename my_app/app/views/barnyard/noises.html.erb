@@ -3,8 +3,8 @@
 	<title>Barnyard noises</title>
 </head>
 <body>
-	<p><% for animal in @barnyard -%></p>
-	<p>The <%= animal.name%> says <%=animal.noise %></p>
+	<p><% for animal in @barnyard.animals -%></p>
+	<p>The <%=animal.class.to_s.downcase %> named <%= animal.name.capitalize %> says <%=animal.noise %></p>
 	<p><% end -%></p>
 <%= debug(@barnyard)%>
 </body>
