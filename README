@@ -1,0 +1,5 @@
+this consists of music_library and my_app.music_library contains admins controller and public controller.
+In that we can create new album record ,update record, delete record.
+
+my_app consists of t wo controller 'barnyard' and 'explore'.explore controller consists of basic things in
+rails like strings,numbers,arrays,hashes and barnyard Controller consists inheritance example.
