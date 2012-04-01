@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<%=form_tag(:action => 'update', :id => @album.id)%><br> 
+Title  <%= text_field(:album,:title)%><br>
+Artist <%= text_field(:album,:artist)%><br>
+Genre  <%= text_field(:album,:genre)%><br>
+
+Release date<%= datetime_select(:album, :release_date,:start_year => 1960)%><br>
+    <%=submit_tag("edit")%><br><br>
+<%=form_tag %>
+
+<%=debug(params)%>
+</body>
+</html>

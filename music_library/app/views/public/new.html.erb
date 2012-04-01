@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<%=form_tag(:action => 'create')%><br>
+<br>
+
+<% @album.errors.full_messages.each do |msg| %>  
+      <li><%= msg %></li>  
+    <% end %>  
+
+<br>
+Title  <%= text_field(:album,:title)%><br>
+Artist <%= text_field(:album,:artist)%><br>
+Genre  <%= text_field(:album,:genre)%><br>
+
+Release date<%= datetime_select(:album, :release_date,:start_year => 1960)%><br>
+    <%=submit_tag("Create")%><br><br>
+<%=form_tag %>
+
+<%=debug(@album.errors)%>
+
+</body>
+</html>
