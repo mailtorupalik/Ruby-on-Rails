@@ -4,10 +4,14 @@
 </head>
 <body>
 <%if @album != nil %>
-	 ID <%= @album.id %> <br>
-	 Title <%= @album.title %> <br>
-	 Artist <%= @album.artist %> <br>
-	 Genre <%= @album.genre %> <br>
+	 ID : <%= @album.id %> <br>
+	 Title : <%= @album.title %> <br>
+	 Old Artist : <%= @album.artist_old %> <br>
+	 New Artist : <%= @album.artist.name %> <br>
+	All Albums : <br><% for album in @album.artist.albums %><br>
+		 <%= @album.title %> <br>
+	<% end %><br>	 
+	Genre : <%= @album.genre %> <br>
  	 Release date <%= @album.release_date %> <br>
 <% else %>
 No record found
@@ -16,5 +20,7 @@ No record found
 <%=link_to('Edit', :action => 'edit',:id => @album.id) %>|
 <%=link_to('Delete', {:action => 'destroy',:id => @album.id},:confirm => 'Are you sure?') %> 
 
+
+<%=debug(@album)%>
 </body>
 </html>

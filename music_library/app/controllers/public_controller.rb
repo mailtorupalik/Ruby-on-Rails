@@ -9,7 +9,7 @@ def alt_album_list                   # this consists of records having artist =R
 	release_date='2000-01-01'
 	artist = 'Rupali'
 	@albums = Album.find(:all, 
-	:conditions => ["release_date <= ? AND artist LIKE ?",release_date,'%' + artist +'%'],
+	:conditions => ["release_date <= ? AND artist_old LIKE ?",release_date,'%' + artist +'%'],
 	:order => 'title, release_date ASC',
 	:limit => 10, :offset => 0)
 
@@ -20,7 +20,7 @@ def show_album
 	release_date='2000-01-01'
 	artist = 'someone'
 	@album = Album.find(:first, 
-	:conditions => ["release_date <= ? AND artist LIKE ?",release_date,'%' + artist +'%'],
+	:conditions => ["release_date <= ? AND artist_old LIKE ?",release_date,'%' + artist +'%'],
 	:order => 'title, release_date ASC')
 
 end
